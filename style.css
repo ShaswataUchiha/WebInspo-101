@@ -1,3 +1,7 @@
+@font-face {
+    font-family: bot;
+    src: url(./Fonts/NeueHaasDisplayMediu.ttf);
+}
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 *{
@@ -5,6 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    /* border: 1px solid red; */
 }
 
 html, body{
@@ -13,10 +18,11 @@ html, body{
 }
 
 #page1{
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background-color: #efeae3;
     position: relative;
+    padding: 0 2vw;
 }
 
 nav{
@@ -73,4 +79,107 @@ nav{
 
 .buttons h4:hover a{
     color: white;
+}
+
+#center{
+    height: 65vh;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid black;
+    padding-bottom: 2.5vw;
+}
+
+.left h3{
+    max-width: 22.8125rem;
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -.03em;
+    font-family: bot;
+    text-align: ;
+}
+
+#center h1{
+    font-size: 10em;
+    font-weight: 500;
+    line-height: .8;
+    font-family: bot;
+    letter-spacing: -.03em;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+#page1 video{
+    position: relative;
+    width: 100%;
+    border-radius: 1.25rem;
+    margin-top: 4vw;
+}
+
+#hero_shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    top: 69vh;
+    bottom: auto;
+    right: 0;
+}
+.hero-1{
+    position: absolute;
+    background-color: #fe3c0e;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+}
+.hero-2{
+    background-color: #fe3c0e;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(20px);
+    animation: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.hero-3{
+    background-color: #fe3c0e;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(20px);
+    animation: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+/* Animation */
+@keyframes anime1 {
+    from{
+        transform: translate(55%, -3%);
+    }
+    to{
+        transform: translate(0%,10%);
+    }
+}
+
+@keyframes anime2 {
+    from{
+        transform: translate(5%, -5%);
+    }
+    to{
+        transform: translate(-20%,20%);
+    }
 }
